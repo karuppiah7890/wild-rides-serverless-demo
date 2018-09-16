@@ -106,6 +106,13 @@ resources:
       Type: AWS::Cognito::UserPool
       Properties:
         UserPoolName: WildRydes
+    WildRydesCognitoUserPoolClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: WildRydesWebApp
+        GenerateSecret: false
+        UserPoolId:
+          Ref: 'WildRydesCognitoUserPool'
   Outputs:
     WildRydesBucketURL:
       Description: 'Wild Rydes Bucket Website URL'
