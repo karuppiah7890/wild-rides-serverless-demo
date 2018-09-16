@@ -4,7 +4,11 @@ https://dev-ops-notes.com/aws/serverless-framework-building-web-app-using-aws-la
 
 https://dev-ops-notes.com/cloud/serverless-framework-building-web-app-using-aws-lambda-amazon-api-gateway-s3-dynamodb-and-cognito-part-2/
 
-# Extra things done
+# Extra things done and learned! 😄
+
+## `sls` / `serverless` supports tab completion! 🎉
+
+Tried this in `zsh` shell and it worked! The tab completion is supported for subcommands and for flags too 😁
 
 ## Locking serverless framework cli version
 
