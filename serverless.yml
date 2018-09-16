@@ -1,21 +1,7 @@
-# Welcome to Serverless!
-#
-# This file is the main config file for your service.
-# It's very minimal at this point and uses default values.
-# You can always add more config options for more control.
-# We've included some commented out config examples here.
-# Just uncomment any of them to get that config option.
-#
-# For full config options, check the docs:
-#    docs.serverless.com
-#
-# Happy Coding!
-
 service: wild-rides-serverless-demo # NOTE: update this with your service name
-
-# You can pin your service to only deploy with a specific Serverless version
-# Check out our docs for more details
-# frameworkVersion: "=X.X.X"
+app: serverless-demo
+tenant: karuppiah7890
+frameworkVersion: '=1.31.0'
 
 provider:
   name: aws
@@ -91,14 +77,33 @@ functions:
 #    environment:
 #      variable2: value2
 
-# you can add CloudFormation resource templates here
-#resources:
-#  Resources:
-#    NewResource:
-#      Type: AWS::S3::Bucket
-#      Properties:
-#        BucketName: my-new-bucket
-#  Outputs:
-#     NewOutput:
-#       Description: "Description for the output"
-#       Value: "Some output value"
+resources:
+  Resources:
+    WildRydesBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: wildrydes-karuppiah-natarajan
+        WebsiteConfiguration:
+          IndexDocument: index.html
+    WildRydesBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket:
+          Ref: 'WildRydesBucket'
+        PolicyDocument:
+          Statement:
+            - Effect: 'Allow'
+              Principal: '*'
+              Action:
+                - 's3:GetObject'
+              Resource:
+                Fn::Join:
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - Ref: 'WildRydesBucket'
+                    - '/*'
+  Outputs:
+    WildRydesBucketURL:
+      Description: 'Wild Rydes Bucket Website URL'
+      Value:
+        'Fn::GetAtt': [WildRydesBucket, WebsiteURL]
