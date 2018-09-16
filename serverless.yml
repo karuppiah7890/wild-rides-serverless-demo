@@ -1,4 +1,4 @@
-service: wild-rides-serverless-demo # NOTE: update this with your service name
+service: wild-rides-serverless-demo
 app: serverless-demo
 tenant: karuppiah7890
 frameworkVersion: '=1.31.0'
