@@ -11,6 +11,7 @@ functions:
   RequestUnicorn:
     handler: handler.handler
     role: WildRydesLambdaRole
+    memorySize: 128
 
 resources:
   Resources:
