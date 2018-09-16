@@ -18,6 +18,8 @@ Locked it in [`serverless.yml`](serverless.yml#L4) using :
 frameworkVersion: '=1.31.0'
 ```
 
+This way, people using this service will be asked to use a sepecific `serverless` cli version to avoid inconsistency among teams and the CI tool too.
+
 ## Using [Serverless Dashboard](https://serverless.com/dashboard/)
 
 Signed up for [Serverless Dashboard](https://dashboard.serverless.com) and created an app `serverless-demo`. used the `app` and `tenant` config in [`serverless.yml`](serverless.yml#L2) like this :
