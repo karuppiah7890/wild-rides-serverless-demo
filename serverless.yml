@@ -102,6 +102,10 @@ resources:
                   - - 'arn:aws:s3:::'
                     - Ref: 'WildRydesBucket'
                     - '/*'
+    WildRydesCognitoUserPool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        UserPoolName: WildRydes
   Outputs:
     WildRydesBucketURL:
       Description: 'Wild Rydes Bucket Website URL'
