@@ -113,6 +113,19 @@ resources:
         GenerateSecret: false
         UserPoolId:
           Ref: 'WildRydesCognitoUserPool'
+    WildRydesDynamoDBTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Rides
+        AttributeDefinitions:
+          - AttributeName: RideId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: RideId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
   Outputs:
     WildRydesBucketURL:
       Description: 'Wild Rydes Bucket Website URL'
@@ -126,3 +139,7 @@ resources:
       Description: 'Wild Rydes Cognito User Pool Client ID'
       Value:
         Ref: 'WildRydesCognitoUserPoolClient'
+    WildRydesDynamoDbARN:
+      Description: 'Wild Rydes DynamoDB ARN'
+      Value:
+        'Fn::GetAtt': [WildRydesDynamoDBTable, Arn]
