@@ -118,3 +118,11 @@ resources:
       Description: 'Wild Rydes Bucket Website URL'
       Value:
         'Fn::GetAtt': [WildRydesBucket, WebsiteURL]
+    WildRydesCognitoUserPoolId:
+      Description: 'Wild Rydes Cognito User Pool ID'
+      Value:
+        Ref: 'WildRydesCognitoUserPool'
+    WildRydesCognitoUserPoolClientId:
+      Description: 'Wild Rydes Cognito User Pool Client ID'
+      Value:
+        Ref: 'WildRydesCognitoUserPoolClient'
