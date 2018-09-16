@@ -1,0 +1,105 @@
+START RequestId: 3feacab4-b9ae-11e8-af31-c357f5031e89 Version: $LATEST
+2018-09-16 18:14:28.530 (+05:30)	3feacab4-b9ae-11e8-af31-c357f5031e89	Received event ( yu1wOsg2M4qyDZRT5A9ZxA ):  { path: '/ride',
+  httpMethod: 'POST',
+  headers:
+   { Accept: '*/*',
+     Authorization: 'eyJraWQiOiJLTzRVMWZs',
+     'content-type': 'application/json; charset=UTF-8' },
+  queryStringParameters: null,
+  pathParameters: null,
+  requestContext: { authorizer: { claims: [Object] } },
+  body: '{"PickupLocation":{"Latitude":47.6174755835663,"Longitude":-122.28837066650185}}' }
+2018-09-16 18:14:28.530 (+05:30)	3feacab4-b9ae-11e8-af31-c357f5031e89	Finding unicorn for  47.6174755835663 ,  -122.28837066650185
+END RequestId: 3feacab4-b9ae-11e8-af31-c357f5031e89
+REPORT RequestId: 3feacab4-b9ae-11e8-af31-c357f5031e89	Duration: 407.19 ms	Billed Duration: 500 ms 	Memory Size: 128 MB	Max Memory Used: 32 MB
+
+START RequestId: 42a77a38-b9ae-11e8-a6e7-519a1f414a91 Version: $LATEST
+2018-09-16 18:14:33.070 (+05:30)	42a77a38-b9ae-11e8-a6e7-519a1f414a91	Received event ( AuDR2Z5RIxf8SrUOR-mucg ):  { path: '/ride',
+  httpMethod: 'POST',
+  headers:
+   { Accept: '*/*',
+     Authorization: 'eyJraWQiOiJLTzRVMWZs',
+     'content-type': 'application/json; charset=UTF-8' },
+  queryStringParameters: null,
+  pathParameters: null,
+  requestContext: { authorizer: { claims: [Object] } },
+  body: '{"PickupLocation":{"Latitude":47.6174755835663,"Longitude":-122.28837066650185}}' }
+END RequestId: 42a77a38-b9ae-11e8-a6e7-519a1f414a91
+REPORT RequestId: 42a77a38-b9ae-11e8-a6e7-519a1f414a91	Duration: 324.55 ms	Billed Duration: 400 ms 	Memory Size: 128 MB	Max Memory Used: 32 MB
+
+START RequestId: 456a6a87-b9ae-11e8-8645-73283cbcba7d Version: $LATEST
+2018-09-16 18:14:37.493 (+05:30)	456a6a87-b9ae-11e8-8645-73283cbcba7d	Received event ( NeH5XQ-81bl_fHlOpvppZg ):  { path: '/ride',
+  httpMethod: 'POST',
+  headers:
+   { Accept: '*/*',
+     Authorization: 'eyJraWQiOiJLTzRVMWZs',
+     'content-type': 'application/json; charset=UTF-8' },
+  queryStringParameters: null,
+  pathParameters: null,
+  requestContext: { authorizer: { claims: [Object] } },
+  body: '{"PickupLocation":{"Latitude":47.6174755835663,"Longitude":-122.28837066650185}}' }
+2018-09-16 18:14:37.494 (+05:30)	456a6a87-b9ae-11e8-8645-73283cbcba7d	Finding unicorn for  47.6174755835663 ,  -122.28837066650185
+END RequestId: 456a6a87-b9ae-11e8-8645-73283cbcba7d
+REPORT RequestId: 456a6a87-b9ae-11e8-8645-73283cbcba7d	Duration: 97.47 ms	Billed Duration: 100 ms 	Memory Size: 128 MB	Max Memory Used: 32 MB
+
+START RequestId: 47bbad71-b9ae-11e8-8c6e-8983129466a2 Version: $LATEST
+2018-09-16 18:14:41.382 (+05:30)	47bbad71-b9ae-11e8-8c6e-8983129466a2	Received event ( 9-zQyOqjgfsQln0VgS-abw ):  { path: '/ride',
+  httpMethod: 'POST',
+  headers:
+   { Accept: '*/*',
+     Authorization: 'eyJraWQiOiJLTzRVMWZs',
+     'content-type': 'application/json; charset=UTF-8' },
+  queryStringParameters: null,
+  pathParameters: null,
+  requestContext: { authorizer: { claims: [Object] } },
+  body: '{"PickupLocation":{"Latitude":47.6174755835663,"Longitude":-122.28837066650185}}' }
+2018-09-16 18:14:41.382 (+05:30)	47bbad71-b9ae-11e8-8c6e-8983129466a2	Finding unicorn for  47.6174755835663 ,  -122.28837066650185
+END RequestId: 47bbad71-b9ae-11e8-8c6e-8983129466a2
+REPORT RequestId: 47bbad71-b9ae-11e8-8c6e-8983129466a2	Duration: 66.33 ms	Billed Duration: 100 ms 	Memory Size: 128 MB	Max Memory Used: 32 MB
+
+START RequestId: 58e01a75-b9ae-11e8-babb-b70c352c08dc Version: $LATEST
+2018-09-16 18:15:10.142 (+05:30)	58e01a75-b9ae-11e8-babb-b70c352c08dc	Received event ( X4VSBYCckxImGqL-KvkuDw ):  { path: '/ride',
+  httpMethod: 'POST',
+  headers:
+   { Accept: '*/*',
+     Authorization: 'eyJraWQiOiJLTzRVMWZs',
+     'content-type': 'application/json; charset=UTF-8' },
+  queryStringParameters: null,
+  pathParameters: null,
+  requestContext: { authorizer: { claims: [Object] } },
+  body: '{"PickupLocation":{"Latitude":47.6174755835663,"Longitude":-122.28837066650185}}' }
+2018-09-16 18:15:10.142 (+05:30)	58e01a75-b9ae-11e8-babb-b70c352c08dc	Finding unicorn for  47.6174755835663 ,  -122.28837066650185
+END RequestId: 58e01a75-b9ae-11e8-babb-b70c352c08dc
+REPORT RequestId: 58e01a75-b9ae-11e8-babb-b70c352c08dc	Duration: 107.25 ms	Billed Duration: 200 ms 	Memory Size: 128 MB	Max Memory Used: 32 MB
+
+START RequestId: 5b80dd0e-b9ae-11e8-b849-ff8d4ac4b4ff Version: $LATEST
+2018-09-16 18:15:14.550 (+05:30)	5b80dd0e-b9ae-11e8-b849-ff8d4ac4b4ff	Received event ( cQCuSP-kFgh5BsiTz7naaA ):  { path: '/ride',
+  httpMethod: 'POST',
+  headers:
+   { Accept: '*/*',
+     Authorization: 'eyJraWQiOiJLTzRVMWZs',
+     'content-type': 'application/json; charset=UTF-8' },
+  queryStringParameters: null,
+  pathParameters: null,
+  requestContext: { authorizer: { claims: [Object] } },
+  body: '{"PickupLocation":{"Latitude":47.6174755835663,"Longitude":-122.28837066650185}}' }
+2018-09-16 18:15:14.550 (+05:30)	5b80dd0e-b9ae-11e8-b849-ff8d4ac4b4ff	Finding unicorn for  47.6174755835663 ,  -122.28837066650185
+END RequestId: 5b80dd0e-b9ae-11e8-b849-ff8d4ac4b4ff
+REPORT RequestId: 5b80dd0e-b9ae-11e8-b849-ff8d4ac4b4ff	Duration: 77.98 ms	Billed Duration: 100 ms 	Memory Size: 128 MB	Max Memory Used: 32 MB
+
+START RequestId: 5e37e78b-b9ae-11e8-a224-13e8dcaaf5fa Version: $LATEST
+2018-09-16 18:15:19.112 (+05:30)	5e37e78b-b9ae-11e8-a224-13e8dcaaf5fa	Received event ( Itu-zHWJU6Zm4bduU7QV1w ):  { path: '/ride',
+  httpMethod: 'POST',
+  headers:
+   { Accept: '*/*',
+     Authorization: 'eyJraWQiOiJLTzRVMWZs',
+     'content-type': 'application/json; charset=UTF-8' },
+  queryStringParameters: null,
+  pathParameters: null,
+  requestContext: { authorizer: { claims: [Object] } },
+  body: '{"PickupLocation":{"Latitude":47.6174755835663,"Longitude":-122.28837066650185}}' }
+2018-09-16 18:15:19.112 (+05:30)	5e37e78b-b9ae-11e8-a224-13e8dcaaf5fa	Finding unicorn for  47.6174755835663 ,  -122.28837066650185
+END RequestId: 5e37e78b-b9ae-11e8-a224-13e8dcaaf5fa
+REPORT RequestId: 5e37e78b-b9ae-11e8-a224-13e8dcaaf5fa	Duration: 57.90 ms	Billed Duration: 100 ms 	Memory Size: 128 MB	Max Memory Used: 32 MB
+
+^C
