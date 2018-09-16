@@ -1,3 +1,9 @@
+# Trying out serverless following
+
+https://dev-ops-notes.com/aws/serverless-framework-building-web-app-using-aws-lambda-amazon-api-gateway-s3-dynamodb-and-cognito
+
+https://dev-ops-notes.com/cloud/serverless-framework-building-web-app-using-aws-lambda-amazon-api-gateway-s3-dynamodb-and-cognito-part-2/
+
 # Static Website Hosting
 
 The static website was uploaded this way:
