@@ -8,8 +8,9 @@ provider:
   runtime: nodejs8.10
 
 functions:
-  hello:
-    handler: handler.hello
+  RequestUnicorn:
+    handler: handler.handler
+    role: WildRydesLambdaRole
 
 resources:
   Resources:
