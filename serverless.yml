@@ -103,6 +103,16 @@ resources:
         EndpointConfiguration:
           Types:
             - EDGE
+    WildRydesApiGatewayAuthorizer:
+      Type: AWS::ApiGateway::Authorizer
+      Properties:
+        Name: WildRydes
+        RestApiId:
+          Ref: WildRydesApiGatewayRestApi
+        Type: COGNITO_USER_POOLS
+        ProviderARNs:
+          - Fn::GetAtt: [WildRydesCognitoUserPool, Arn]
+        IdentitySource: method.request.header.Authorization
   Outputs:
     WildRydesBucketURL:
       Description: 'Wild Rydes Bucket Website URL'
