@@ -96,6 +96,13 @@ resources:
                     - dynamodb:PutItem
                   Resource:
                     'Fn::GetAtt': [WildRydesDynamoDBTable, Arn]
+    WildRydesApiGatewayRestApi:
+      Type: AWS::ApiGateway::RestApi
+      Properties:
+        Name: WildRydes
+        EndpointConfiguration:
+          Types:
+            - EDGE
   Outputs:
     WildRydesBucketURL:
       Description: 'Wild Rydes Bucket Website URL'
