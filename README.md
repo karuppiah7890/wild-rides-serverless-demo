@@ -57,6 +57,16 @@ $ sls invoke --path demos-and-examples/testEvent.json --function RequestUnicorn
 
 It's an alternative to the tutorial's console based method to test the lambda function. This came in handy as it can be done from the command line itself which is what the tutorial is mostly trying to do - automating things using `serverless` and by doing almost everything from the CLI without using the console,like, even to get the ID of a resource for eg Cognito User Pool ID, we use `Outputs` in `serverless.yml` to see the output while deploying or after deploying using `sls info --verbose`. And for event data, it can be passed using a json file 😉.
 
+## Testing the API Gateway Authorizer using `aws` CLI
+
+Tested it using this command :
+
+```
+aws apigateway test-invoke-authorizer --rest-api-id <rest-api-id> --authorizer-id <authorizer-id> --headers Authorization=<token>
+```
+
+You need to replace the `<>` placeholders with actual values. The IDs were obtained as outputs while deploying using `sls deploy --verbose`, as it was part of the set of outputs in [`serverless.yml`](serverless.yml#L133)
+
 ## Locking serverless framework cli version
 
 Locked it in [`serverless.yml`](serverless.yml#L4) using :
