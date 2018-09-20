@@ -130,3 +130,11 @@ resources:
       Description: 'Wild Rydes DynamoDB ARN'
       Value:
         'Fn::GetAtt': [WildRydesDynamoDBTable, Arn]
+    WildRydesApiGatewayRestApiId:
+      Description: 'Wild Rydes API Gateway ID'
+      Value:
+        Ref: 'WildRydesApiGatewayRestApi'
+    WildRydesApiGatewayAuthorizerId:
+      Description: 'Wild Rydes API Authorizer'
+      Value:
+        Ref: 'WildRydesApiGatewayAuthorizer'
