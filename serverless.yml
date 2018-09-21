@@ -210,3 +210,14 @@ resources:
       Description: 'Wild Rydes API Authorizer'
       Value:
         Ref: 'WildRydesApiGatewayAuthorizer'
+    WildRydesApiGatewayUrl:
+      Description: 'Wild Rydes Api Gateway URL'
+      Value:
+        'Fn::Join':
+          - ''
+          - - 'https://'
+            - Ref: 'WildRydesApiGatewayRestApi'
+            - '.execute-api.'
+            - Ref: 'AWS::Region'
+            - '.amazonaws.com'
+            - "/${opt:stage, 'dev'}"
