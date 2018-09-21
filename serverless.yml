@@ -178,6 +178,13 @@ resources:
                       - 'functions'
                       - Fn::GetAtt: [RequestUnicornLambdaFunction, Arn]
                       - 'invocations'
+    WildRydesApiGatewayDeployment:
+      Type: AWS::ApiGateway::Deployment
+      Properties:
+        Description: Wild Rydes Api
+        RestApiId:
+          Ref: WildRydesApiGatewayRestApi
+        StageName: ${opt:stage, 'dev'}
   Outputs:
     WildRydesBucketURL:
       Description: 'Wild Rydes Bucket Website URL'
