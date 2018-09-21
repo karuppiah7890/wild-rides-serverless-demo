@@ -113,6 +113,71 @@ resources:
         ProviderARNs:
           - Fn::GetAtt: [WildRydesCognitoUserPool, Arn]
         IdentitySource: method.request.header.Authorization
+    WildRydeApiGatewayRidesResource:
+      Type: AWS::ApiGateway::Resource
+      Properties:
+        ParentId:
+          Fn::GetAtt: [WildRydesApiGatewayRestApi, RootResourceId]
+        PathPart: ride
+        RestApiId:
+          Ref: WildRydesApiGatewayRestApi
+    WildRydesRideOptionsMethod:
+      Type: AWS::ApiGateway::Method
+      Properties:
+        AuthorizationType: NONE
+        RestApiId:
+          Ref: WildRydesApiGatewayRestApi
+        ResourceId:
+          Ref: WildRydeApiGatewayRidesResource
+        HttpMethod: OPTIONS
+        Integration:
+          IntegrationResponses:
+            - StatusCode: 200
+              ResponseParameters:
+                method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+                method.response.header.Access-Control-Allow-Methods: "'POST,OPTIONS'"
+                method.response.header.Access-Control-Allow-Origin: "'*'"
+              ResponseTemplates:
+                application/json: ''
+          PassthroughBehavior: WHEN_NO_MATCH
+          RequestTemplates:
+            application/json: '{"statusCode": 200}'
+          Type: MOCK
+        MethodResponses:
+          - StatusCode: 200
+            ResponseModels:
+              application/json: 'Empty'
+            ResponseParameters:
+              method.response.header.Access-Control-Allow-Headers: false
+              method.response.header.Access-Control-Allow-Methods: false
+              method.response.header.Access-Control-Allow-Origin: false
+    WildRydesRidePostMethod:
+      Type: AWS::ApiGateway::Method
+      Properties:
+        AuthorizerId:
+          Ref: WildRydesApiGatewayAuthorizer
+        AuthorizationType: COGNITO_USER_POOLS
+        HttpMethod: POST
+        ResourceId:
+          Ref: WildRydeApiGatewayRidesResource
+        RestApiId:
+          Ref: WildRydesApiGatewayRestApi
+        Integration:
+          Type: AWS_PROXY
+          IntegrationHttpMethod: POST
+          Uri:
+            Fn::Join:
+              - ':'
+              - - 'arn:aws:apigateway'
+                - Ref: 'AWS::Region'
+                - 'lambda'
+                - Fn::Join:
+                    - '/'
+                    - - 'path'
+                      - '2015-03-31'
+                      - 'functions'
+                      - Fn::GetAtt: [RequestUnicornLambdaFunction, Arn]
+                      - 'invocations'
   Outputs:
     WildRydesBucketURL:
       Description: 'Wild Rydes Bucket Website URL'
