@@ -17,7 +17,10 @@ functions:
           path: ride
           method: post
           cors: true
-
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: WildRydesApiGatewayAuthorizer
 resources:
   Resources:
     WildRydesBucket:
@@ -101,6 +104,16 @@ resources:
                     - dynamodb:PutItem
                   Resource:
                     'Fn::GetAtt': [WildRydesDynamoDBTable, Arn]
+    WildRydesApiGatewayAuthorizer:
+      Type: AWS::ApiGateway::Authorizer
+      Properties:
+        Name: WildRydes
+        RestApiId:
+          Ref: ApiGatewayRestApi
+        Type: COGNITO_USER_POOLS
+        ProviderARNs:
+          - Fn::GetAtt: [WildRydesCognitoUserPool, Arn]
+        IdentitySource: method.request.header.Authorization
   Outputs:
     WildRydesBucketURL:
       Description: 'Wild Rydes Bucket Website URL'
